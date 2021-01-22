@@ -17,7 +17,9 @@ with open('emails', 'r') as file:
     receiver_emails = file.read().splitlines()
 
 # problem bank
-problems = ["problem 1", "problem 2", "problem 3"]
+problems = []
+with open('problems', 'r') as file:
+    problems = file.read().splitlines()
 n = len(problems)
 
 # randomly assign to each problem

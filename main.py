@@ -53,3 +53,11 @@ with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
             message.attach(part1)
             message.attach(part2)
             server.sendmail(sender_email, receiver_email, message.as_string())
+
+print("\nAll messages has been sent")
+
+with open('log', 'w') as file:
+    for i in range(n):
+        file.write("{} : {}\n".format(problems[i], assigned[i]))
+
+
